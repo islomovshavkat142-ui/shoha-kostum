@@ -1,0 +1,214 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    /* Вставь это в начало своего CSS */
+:root {
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Montserrat', sans-serif;
+    --gold: #c5a059;
+}
+
+h1, h2, h3, .delivery-hero__title, .service-card h3 {
+    font-family: var(--font-heading) !important;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+p, span, .nav-link, .service-card p {
+    font-family: var(--font-body) !important;
+    font-weight: 300; /* Тонкое начертание выглядит дороже */
+    line-height: 1.6;
+}
+
+.delivery-hero__title {
+    letter-spacing: 15px; /* Увеличим разрядку для эффекта роскоши */
+    text-transform: uppercase;
+}
+    /* 1. ГЛАВНЫЙ КОНТЕЙНЕР (ВОЗВРАТ К ЧЕРНОМУ СТИЛЮ) */
+    .delivery-page {
+        background-color: #0f0f0f !important;
+        color: #ffffff !important;
+        font-family: 'Inter', sans-serif;
+    }
+
+    /* 2. HERO СЕКЦИЯ */
+    .delivery-hero {
+        position: relative;
+        height: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background-color: #0f0f0f !important;
+        border-bottom: 1px solid rgba(197, 160, 89, 0.1) !important;
+    }
+
+    .delivery-hero__content {
+        position: relative;
+        z-index: 10;
+        text-align: center;
+    }
+
+    .delivery-hero__title {
+        font-size: clamp(2.5rem, 5vw, 3.5rem);
+        font-weight: 300;
+        color: #ffffff !important;
+        text-transform: uppercase;
+        letter-spacing: 12px;
+        margin-bottom: 15px;
+    }
+
+    .delivery-hero__accent {
+        color: #c5a059 !important; /* Золото */
+        font-size: 1.1rem;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        font-family: serif;
+    }
+
+    /* 3. СЕРВИСНАЯ СЕТКА */
+    .service-grid-wrap {
+        background-color: #161616 !important; /* Чуть светлее основного фона для контраста */
+        padding: 100px 0 !important;
+        width: 100%;
+    }
+
+    .service-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 40px;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* 4. КАРТОЧКИ (В СТИЛЕ SHOHA KOSTUM) */
+    .service-card {
+        padding: 50px 40px !important;
+        background-color: #1a1a1a !important;
+        border: 1px solid rgba(197, 160, 89, 0.2) !important;
+        transition: all 0.4s ease !important;
+    }
+
+    .service-card:hover {
+        transform: translateY(-10px) !important;
+        border-color: #c5a059 !important;
+        background-color: #252525 !important;
+    }
+
+    .service-card__num {
+        display: block;
+        font-size: 0.8rem;
+        color: #c5a059 !important;
+        margin-bottom: 25px;
+        letter-spacing: 3px;
+        font-weight: 600;
+    }
+
+    .service-card h3 {
+        font-size: 1.4rem;
+        color: #ffffff !important;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .service-card p {
+        color: #a0a0a0 !important;
+        line-height: 1.8;
+        font-size: 1rem;
+    }
+
+    .highlight {
+        color: #c5a059;
+        font-weight: bold;
+    }
+
+    /* 5. ПОДВАЛ С КНОПКОЙ БОТА */
+    .bts-cta {
+        padding: 100px 0;
+        text-align: center;
+        background-color: #0f0f0f !important;
+    }
+
+    .bts-btn {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 18px 50px;
+        background: #c5a059;
+        color: #000 !important;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        font-weight: bold;
+        letter-spacing: 2px;
+        transition: 0.3s;
+    }
+
+    .bts-btn:hover {
+        background: transparent;
+        color: #c5a059 !important;
+        border: 1px solid #c5a059;
+    }
+
+    .bts-shield {
+        width: 60px;
+        height: 1px;
+        background: #c5a059;
+        margin: 0 auto 30px;
+        opacity: 0.5;
+    }
+
+    @media (max-width: 768px) {
+        .delivery-hero { height: 30vh; }
+        .delivery-hero__title { letter-spacing: 6px; }
+    }
+</style>
+
+<div class="delivery-page">
+    <section class="delivery-hero">
+        <div class="delivery-hero__content">
+            <p class="delivery-hero__accent">Delivery Information</p>
+            <h1 class="delivery-hero__title">Доставка</h1>
+        </div>
+    </section>
+
+    <div class="service-grid-wrap">
+        <div class="container">
+            <section class="service-grid">
+                <!-- Карта 1: BTS ПОЧТА -->
+                <div class="service-card">
+                    <span class="service-card__num">01 / LOGISTICS</span>
+                    <h3>BTS Почта</h3>
+                    <p>Мы осуществляем отправку готовых изделий через надежную сеть <span class="highlight">BTS Почта</span>. Доставка до любого официального филиала BTS по всему Узбекистану — <span class="highlight">бесплатная</span>.</p>
+                </div>
+
+                <!-- Карта 2: ДО ДОМА -->
+                <div class="service-card">
+                    <span class="service-card__num">02 / PREMIUM SERVICE</span>
+                    <h3>Доставка до двери</h3>
+                    <p>Если вам необходима доставка прямо до дома или офиса, этот вариант <span class="highlight">обговаривается индивидуально</span> с вашим закройщиком при оформлении заказа.</p>
+                </div>
+
+                <!-- Карта 3: ЛОКАЦИИ -->
+                <div class="service-card">
+                    <span class="service-card__num">03 / LOCATIONS</span>
+                    <h3>Филиалы и точки</h3>
+                    <p>Полный список всех доступных локаций и пунктов выдачи BTS во всех городах Узбекистана вы найдете в нашем <span class="highlight">Telegram-боте</span> при подтверждении заказа.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <section class="bts-cta">
+        <div class="container">
+            <div class="bts-shield"></div>
+            <p style="color: #ffffff; letter-spacing: 2px; text-transform: uppercase; font-size: 1rem; margin-bottom: 10px;">Выберите удобную точку в нашем боте</p>
+            <p style="color: #6a7682; font-size: 0.9rem; max-width: 600px; margin: 0 auto;">BTS Почта — основной способ доставки. Итоговая цена и способ получения фиксируются закройщиком.</p>
+            <a href="https://t.me/shoha_kostum_bot" class="bts-btn">Открыть Telegram Бот</a>
+        </div>
+    </section>
+</div>
+{% endblock %}

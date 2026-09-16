@@ -1,0 +1,88 @@
+{% load static %}
+    <!-- The site and bot was creates by Shava(@Shava_Code in telegram) -->
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}Мастерская пошива костюмов{% endblock %}</title>
+
+    <!-- СТИЛИ -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=1.3">
+
+    <!-- ИКОНКА ДЛЯ ВКЛАДКИ (FAVICON) -->
+    <link rel="icon" type="image/png" href="{% static 'images/logo.png' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+
+    <!-- ШАПКА (HEADER) -->
+    <header class="main-header">
+        <div class="container header-wrapper">
+            <div class="logo">
+                <a href="{% url 'index' %}" class="logo__link">SHOHA KOSTUM</a>
+            </div>
+
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="{% url 'index' %}" class="nav-link">Главная</a></li>
+                    <li><a href="{% url 'about' %}" class="nav-link">О компании</a></li>
+                    <li><a href="{% url 'services' %}" class="nav-link">Услуги</a></li>
+                    <li><a href="{% url 'fabrics' %}" class="nav-link">Ткани</a></li>
+                    <li><a href="{% url 'process' %}" class="nav-link">Процесс</a></li>
+                    <li><a href="{% url 'portfolio' %}" class="nav-link">Работы</a></li>
+                    <li><a href="{% url 'delivery' %}" class="nav-link">Доставка</a></li>
+                    <li><a href="{% url 'contact' %}" class="nav-link">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ -->
+    <main class="main-content">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- ПОДВАЛ (FOOTER) -->
+    <footer class="main-footer">
+    <div class="container footer-grid">
+        <div class="footer-info">
+            <h3 class="footer-logo">SHOHA <span>KOSTUM</span></h3>
+            <p>Индивидуальный пошив премиальных костюмов с доставкой по всему Узбекистану.</p>
+        </div>
+
+        <div class="footer-links">
+            <h4>Навигация</h4>
+            <ul>
+                <li><a href="{% url 'fabrics' %}">Каталог тканей</a></li>
+                <li><a href="{% url 'process' %}">Как мы шьем</a></li>
+                <li><a href="{% url 'delivery' %}">Условия доставки</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-contacts">
+            <h4>Контакты</h4>
+            <p>Самарканд, Узбекистан (Удаленно)</p>
+            <p>Email: shoha31378@gmail.com</p>
+            <div class="social-links">
+                <a href="https://t.me/shoha_kostum_bot" >Telegram</a> <br>
+                <a>Можете обсудить все детали и получить консультацию по рабочему номеру: +998 (97) 924-78-09.
+Звонки принимаются с понедельника по субботу, с 09:00 до 18:00.
+</a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 SHOHA KOSTUM. Все права защищены.</p>
+    </div>
+</footer>
+<script src="{% static 'js/script.js' %}?v=1.1"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>

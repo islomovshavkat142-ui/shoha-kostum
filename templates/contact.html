@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Инструкция и Контакты | SHOHA KOSTUM{% endblock %}
+
+{% block content %}
+<section class="contact-page">
+    <div class="container">
+        <!-- ЗАГОЛОВОК -->
+        <div class="contact-header">
+            <h1 class="contact-header__title">ВАШ ПЕРВЫЙ ШАГ</h1>
+            <p class="contact-header__subtitle">Снимите мерки по инструкции ниже. Эти 6 ключевых параметров позволят нам создать идеальный силуэт без единой примерки.</p>
+        </div>
+
+        <!-- БЛОК ИНСТРУКЦИИ -->
+        <div class="instruction-grid">
+
+            <!-- 01 Плечи и грудь -->
+            <div class="instruction-card">
+                <div class="instruction-card__img">
+                    <img src="{% static 'images/contact1.jpg' %}" alt="Замер плеч">
+                </div>
+                <div class="instruction-card__info">
+                    <span>01.</span>
+                    <h3>Плечи и грудь</h3>
+                    <p>Измеряйте по самым выступающим точкам лопаток и груди. Лента должна идти параллельно полу.</p>
+                </div>
+            </div>
+
+            <!-- 02 Длина рукава -->
+            <div class="instruction-card">
+                <div class="instruction-card__img">
+                    <img src="{% static 'images/contact2.jpg' %}" alt="Замер рукава">
+                </div>
+                <div class="instruction-card__info">
+                    <span>02.</span>
+                    <h3>Длина рукава</h3>
+                    <p>От плечевого сустава до начала большого пальца. Рука слегка согнута в локте.</p>
+                </div>
+            </div>
+
+            <!-- 03 Пояс -->
+            <div class="instruction-card">
+                <div class="instruction-card__img">
+                    <img src="{% static 'images/contact3.jpg' %}" alt="Замер талии">
+                </div>
+                <div class="instruction-card__info">
+                    <span>03.</span>
+                    <h3>Обхват пояса</h3>
+                    <p>Замеряйте на уровне, где вы комфортно носите брюки. Не втягивайте живот при замере.</p>
+                </div>
+            </div>
+
+            <!-- 04 Длина брюк (НОВАЯ) -->
+            <div class="instruction-card">
+                <div class="instruction-card__img">
+                    <img src="{% static 'images/contact4.jpg' %}" alt="Длина брюк">
+                </div>
+                <div class="instruction-card__info">
+                    <span>04.</span>
+                    <h3>Внешний шов брюк</h3>
+                    <p>От линии пояса до края подошвы обуви. Это определит правильный "залом" брючины.</p>
+                </div>
+            </div>
+
+            <!-- 05 Обхват бицепса (НОВАЯ) -->
+            <div class="instruction-card">
+                <div class="instruction-card__img">
+                    <img src="{% static 'images/contact5.jpg' %}" alt="Обхват руки">
+                </div>
+                <div class="instruction-card__info">
+                    <span>05.</span>
+                    <h3>Обхват бицепса</h3>
+                    <p>Замеряйте самую широкую часть расслабленной руки. Важно для свободы движения в рукаве.</p>
+                </div>
+            </div>
+
+            <!-- 06 Обхват бедра (НОВАЯ) -->
+            <div class="instruction-card">
+                <div class="instruction-card__img">
+                    <img src="{% static 'images/contact6.jpg' %}" alt="Обхват ноги">
+                </div>
+                <div class="instruction-card__info">
+                    <span>06.</span>
+                    <h3>Обхват бедра</h3>
+                    <p>Замер в самой широкой части ноги. Это гарантирует, что брюки не будут сковывать шаг.</p>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- БЛОК ЗАКАЗА -->
+        <div class="order-action">
+            <div class="order-action__content">
+                <h2>Все мерки готовы?</h2>
+                <p>Нажмите на кнопку ниже, чтобы передать данные нашему боту. Укажите ткань и ваши пожелания. <strong>Закройщик выйдет на связь в течение 24 рабочих часов.</strong></p>
+
+                <a href="https://t.me/shoha_kostum_bot" class="btn-telegram" target="_blank">
+                    <i class="fab fa-telegram-plane"></i> ОТПРАВИТЬ ДАННЫЕ В БОТ
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+
+</style>
+{% endblock %}

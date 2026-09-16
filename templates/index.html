@@ -1,0 +1,239 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<style>
+    /* ФИНАЛЬНЫЙ СТИЛЬ: ТЕМНЫЙ ПРЕМИУМ + ИНТЕРАКТИВ */
+    :root {
+        --gold: #c5a059;
+        --gold-hover: #e2ba73;
+        --dark-bg: #0f0f0f;
+        --card-bg: #1a1a1a;
+        --card-hover-bg: #2a2a2a; /* Светлее при наведении */
+        --text-light: #ffffff;
+        --text-muted: #a0a0a0;
+        --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    body {
+        background-color: var(--dark-bg);
+        color: var(--text-light);
+        margin: 0;
+        font-family: 'Playfair Display', serif;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: 120px 0;
+        text-align: center;
+    }
+
+    .hero-section__title {
+        font-size: 3.5rem;
+        margin-bottom: 25px;
+        line-height: 1.2;
+    }
+
+    /* Кнопка с анимацией */
+    .button-main {
+        background-color: var(--gold);
+        color: #000;
+        padding: 18px 45px;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 700;
+        display: inline-block;
+        border: 1px solid var(--gold);
+        transition: var(--transition);
+    }
+
+    .button-main:hover {
+        background-color: transparent;
+        color: var(--gold);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(197, 160, 89, 0.3);
+    }
+
+    /* Баннер бренда */
+    .brand-identity-full {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .full-width-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: filter 0.5s ease;
+    }
+
+    .full-width-image:hover img {
+        filter: brightness(1.1);
+    }
+
+    /* Карточки шагов (Step Cards) */
+    .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 60px;
+        text-transform: uppercase;
+    }
+
+    .steps-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .step-card {
+        background: var(--card-bg);
+        padding: 50px 40px;
+        border: 1px solid #333;
+        transition: var(--transition);
+        cursor: pointer;
+    }
+
+    .step-card:hover {
+        background: var(--card-hover-bg); /* Смена на светлый цвет */
+        transform: scale(1.05); /* Увеличение */
+        border-color: var(--gold);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .step-card__number {
+        color: var(--gold);
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    .step-card__title {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        transition: color 0.3s ease;
+    }
+
+    .step-card:hover .step-card__title {
+        color: var(--gold);
+    }
+
+    .step-card p {
+        color: var(--text-muted);
+        transition: color 0.3s ease;
+    }
+
+    .step-card:hover p {
+        color: var(--text-light); /* Текст становится ярче */
+    }
+
+    /* Преимущества */
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
+        padding: 80px 0;
+    }
+
+    .feature-card {
+        background: var(--card-bg);
+        padding: 30px;
+        border-left: 3px solid var(--gold);
+        transition: var(--transition);
+    }
+
+    .feature-card:hover {
+        background: var(--card-hover-bg);
+        transform: translateX(10px);
+    }
+
+    .link-more {
+        color: var(--gold);
+        text-decoration: none;
+        border-bottom: 1px solid var(--gold);
+        padding-bottom: 5px;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        transition: 0.3s;
+    }
+
+    .link-more:hover {
+        letter-spacing: 8px;
+    }
+</style>
+
+<section class="hero-section">
+    <div class="container">
+        <h1 class="hero-section__title">Индивидуальный пошив костюмов премиум-класса</h1>
+        <p class="hero-section__description" style="color: var(--text-muted); max-width: 750px; margin: 0 auto;">
+            Более 30 лет создаём одежду вручную. Классика, полуклассика и верхняя одежда
+            с идеальной посадкой — без необходимости посещения ателье.
+        </p>
+        <div style="margin-top: 50px;">
+            <a href="{% url 'contact' %}" class="button-main">Заказать консультацию</a>
+        </div>
+    </div>
+</section>
+
+<section class="brand-identity-full">
+    <div class="full-width-image" style="width: 100vw; position: relative; left: 50%; right: 50%; margin-left: -50vw; margin-right: -50vw;">
+        <img src="{% static 'images/logo.png' %}" alt="SHOHA KOSTUM BANNER">
+    </div>
+    <div class="container" style="text-align: center; padding: 50px 0;">
+        <span style="display: block; color: var(--gold); letter-spacing: 6px; font-size: 1.2rem; margin-bottom: 25px;">EST. 1996</span>
+        <a href="{% url 'about' %}" class="link-more">Узнать историю бренда</a>
+    </div>
+</section>
+
+<section class="how-it-works container">
+    <h2 class="section-title">Процесс создания</h2>
+    <div class="steps-grid">
+        <div class="step-card">
+            <span class="step-card__number">01</span>
+            <h4 class="step-card__title">Выбор ткани</h4>
+            <p>Лучшие мануфактуры Италии, Турции и Англии в нашем каталоге.</p>
+        </div>
+        <div class="step-card">
+            <span class="step-card__number">02</span>
+            <h4 class="step-card__title">Замеры</h4>
+            <p>Дистанционное сопровождение мастера для идеальной точности.</p>
+        </div>
+        <div class="step-card">
+            <span class="step-card__number">03</span>
+            <h4 class="step-card__title">Результат</h4>
+            <p>Ручная сборка и доставка вашего идеального костюма.</p>
+        </div>
+    </div>
+</section>
+
+<section class="features container">
+    <div class="features-grid">
+        <div class="feature-card">
+            <h4 style="color: var(--gold); margin-bottom: 10px;">Любой дизайн</h4>
+            <p style="color: var(--text-muted);">Повторим любой костюм по фото с адаптацией под вашу фигуру.</p>
+        </div>
+        <div class="feature-card">
+            <h4 style="color: var(--gold); margin-bottom: 10px;">Пошив по образцу</h4>
+            <p style="color: var(--text-muted);">Пришлите любимый костюм, и мы сделаем дубликат с такой же посадкой.</p>
+        </div>
+        <div class="feature-card">
+            <h4 style="color: var(--gold); margin-bottom: 10px;">Опыт 30 лет</h4>
+            <p style="color: var(--text-muted);">Гарантируем, что изделие сядет идеально с первого раза.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta container" style="text-align: center; padding: 100px 0; border-top: 1px solid #333; margin-top: 50px;">
+    <h2 class="section-title">Готовы к новому образу?</h2>
+    <p style="color: var(--text-muted); margin-bottom: 40px;">Оставьте заявку, и мы свяжемся с вами в течение 24 часа.</p>
+    <a href="{% url 'contact' %}" class="button-main">Оставить заявку</a>
+</section>
+
+{% endblock %}

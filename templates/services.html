@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Услуги | SHOHA KOSTUM{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1 class="page-header__title">Наши услуги</h1>
+        <p class="page-header__subtitle">Создаем эталон мужского стиля по индивидуальным меркам</p>
+    </div>
+</section>
+
+<section class="services-list container">
+    <div class="services-grid">
+        
+        <div class="service-item">
+            <div class="service-item__info">
+                <span class="service-item__number">01</span>
+                <h2 class="service-item__title">Индивидуальный пошив костюма</h2>
+                <p class="service-item__text">
+                    Классические двойки и тройки для бизнеса и торжественных событий. 
+                    Используем технологию ручного кроя, обеспечивающую идеальную посадку.
+                </p>
+                <ul class="service-item__details">
+                    <li>Более 400 видов тканей</li>
+                    <li>Ручная обработка петель на заказ, по желанию</li>
+                    <li>Срок изготовления: от 14 дней</li>
+                </ul>
+            </div>
+            <div class="service-item__image">
+                <img src="{% static 'images/ser1.jpg' %}" alt="Пошив костюма">
+            </div>
+        </div>
+
+        <div class="service-item service-item--reverse">
+            <div class="service-item__info">
+                <span class="service-item__number">02</span>
+                <h2 class="service-item__title">Верхняя одежда</h2>
+                <p class="service-item__text">
+                    Пальто, плащи и куртки из кашемира и премиальной шерсти. 
+                    Вещи, которые согревают и сохраняют ваш статус в любую погоду.
+                </p>
+                <ul class="service-item__details">
+                    <li>Шерсть лавсан ёлочка</li>
+                    <li>Индивидуальный дизайн подкладки</li>
+                </ul>
+            </div>
+            <div class="service-item__image">
+                <img src="{% static 'images/ser2.jpg' %}" alt="Пошив пальто">
+            </div>
+        </div>
+
+        <div class="service-item">
+            <div class="service-item__info">
+                <span class="service-item__number">03</span>
+                <h2 class="service-item__title">Дистанционный пошив</h2>
+                <p class="service-item__text">
+                    Уникальная услуга для клиентов из других городов. Мы проводим замеры онлайн 
+                    под руководством мастера или шьем по вашему готовому эталонному костюму.
+                </p>
+                <div class="service-item__badge">Бесплатная доставка по Узбекистану</div>
+            </div>
+            <div class="service-item__image">
+                <img src="{% static 'images/ser3.jpg' %}" alt="Удаленный пошив">
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="services-cta">
+    <div class="container cta-box">
+        <h3>Хотите обсудить ваш будущий проект?</h3>
+        <p>Запишитесь на консультацию, и мы поможем подобрать ткань и фасон.</p>
+        <a href="{% url 'contact' %}" class="button-main">Записаться</a>
+    </div>
+</section>
+
+{% endblock %}

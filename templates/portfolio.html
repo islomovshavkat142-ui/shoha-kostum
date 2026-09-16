@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Портфолио | SHOHA KOSTUM{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <div class="container">
+        <h1 class="page-header__title">Наши работы</h1>
+        <p class="page-header__subtitle">Бесконечный поток стиля и мастерства</p>
+    </div>
+</section>
+
+<section class="portfolio-carousel">
+    <div class="portfolio-track">
+
+        <div class="portfolio-item"><div class="portfolio-item__inner"><div class="portfolio-item__front"><img src="{% static 'images/portfolio.png' %}" alt="Work 1"></div><div class="portfolio-item__back"><h3>Классическая полоска</h3><p>Деловой костюм из итальянской шерсти. Ручная работа и безупречная посадка.</p></div></div></div>
+        <div class="portfolio-item"><div class="portfolio-item__inner"><div class="portfolio-item__front"><img src="{% static 'images/portfolio1.png' %}" alt="Work 2"></div><div class="portfolio-item__back"><h3>Зимний Шик</h3><p>Шерстяной бомбер с меховой отделкой. Тепло и стиль в повседневном образе.</p></div></div></div>
+        <div class="portfolio-item"><div class="portfolio-item__inner"><div class="portfolio-item__front"><img src="{% static 'images/portfolio3.png' %}" alt="Work 3"></div><div class="portfolio-item__back"><h3>Кашемировое Пальто</h3><p>Двубортная модель из премиального кашемира. Классика мужского гардероба.</p></div></div></div>
+        <div class="portfolio-item"><div class="portfolio-item__inner"><div class="portfolio-item__front"><img src="{% static 'images/portfolio4.png' %}" alt="Work 4"></div><div class="portfolio-item__back"><h3>Итальянская Лазурь</h3><p>Легкий пиджак из мягкой ткани S'150. Идеально для летнего сезона.</p></div></div></div>
+        <div class="portfolio-item"><div class="portfolio-item__inner"><div class="portfolio-item__front"><img src="{% static 'images/portfolio5.png' %}" alt="Work 5"></div><div class="portfolio-item__back"><h3>Британская Клетка</h3><p>Пальто из английской шерсти. Тщательная подгонка сложного рисунка.</p></div></div></div>
+        <div class="portfolio-item"><div class="portfolio-item__inner"><div class="portfolio-item__front"><img src="{% static 'images/portfolio7.png' %}" alt="Work 6"></div><div class="portfolio-item__back"><h3>Контрастный Акцент</h3><p>Пиджак в клетку с авторской отделкой воротника. Уникальный дизайн.</p></div></div></div>
+        <div class="portfolio-item"><div class="portfolio-item__inner"><div class="portfolio-item__front"><img src="{% static 'images/portfolio8.png' %}" alt="Work 7"></div><div class="portfolio-item__back"><h3>Небесный Smart Casual</h3><p>Летний блейзер с шелком. Свежий образ для встреч и отдыха.</p></div></div></div>
+        <div class="portfolio-item"><div class="portfolio-item__inner"><div class="portfolio-item__front"><img src="{% static 'images/portfolio9.png' %}" alt="Work 8"></div><div class="portfolio-item__back"><h3>Бархатный Синий</h3><p>Пиджак из фактурного вельвета. Роскошь и комфорт в одной модели.</p></div></div></div>
+        <div class="portfolio-item"><div class="portfolio-item__inner"><div class="portfolio-item__front"><img src="{% static 'images/portfolio10.png' %}" alt="Work 9"></div><div class="portfolio-item__back"><h3>Летняя Элегантность</h3><p>Пиджак в широкую полоску из льна. Воплощение средиземноморского стиля.</p></div></div></div>
+        <div class="portfolio-item"><div class="portfolio-item__inner"><div class="portfolio-item__front"><img src="{% static 'images/portfolio11.png' %}" alt="Work 10"></div><div class="portfolio-item__back"><h3>Кожаный Тренч</h3><p>Эксклюзив из мягкой кожи наппа. Матовый блеск и ручная сборка.</p></div></div></div>
+        <div class="portfolio-item"><div class="portfolio-item__inner"><div class="portfolio-item__front"><img src="{% static 'images/portfolio12.png' %}" alt="Work 11"></div><div class="portfolio-item__back"><h3>Горчичный Оверкот</h3><p>Яркое пальто из плотной шерсти. Смелое решение для холодного сезона.</p></div></div></div>
+        <div class="portfolio-item"><div class="portfolio-item__inner"><div class="portfolio-item__front"><img src="{% static 'images/portfolio13.png' %}" alt="Work 12"></div><div class="portfolio-item__back"><h3>Изумрудный Шарм</h3><p>Вечерний пиджак с шелковыми лацканами. Для самых важных событий.</p></div></div></div>
+
+        <div class="portfolio-item"><div class="portfolio-item__inner"><div class="portfolio-item__front"><img src="{% static 'images/portfolio.png' %}" alt="Work 1"></div><div class="portfolio-item__back"><h3>Классическая полоска</h3><p>Традиции Bespoke пошива.</p></div></div></div>
+        <div class="portfolio-item"><div class="portfolio-item__inner"><div class="portfolio-item__front"><img src="{% static 'images/portfolio1.png' %}" alt="Work 2"></div><div class="portfolio-item__back"><h3>Зимний Шик</h3><p>Премиальная верхняя одежда.</p></div></div></div>
+        <div class="portfolio-item"><div class="portfolio-item__inner"><div class="portfolio-item__front"><img src="{% static 'images/portfolio3.png' %}" alt="Work 3"></div><div class="portfolio-item__back"><h3>Кашемировое Пальто</h3><p>Благородство кашемира.</p></div></div></div>
+        <div class="portfolio-item"><div class="portfolio-item__inner"><div class="portfolio-item__front"><img src="{% static 'images/portfolio4.png' %}" alt="Work 4"></div><div class="portfolio-item__back"><h3>Итальянская Лазурь</h3><p>Мягкий крой и легкость ткани.</p></div></div></div>
+        <div class="portfolio-item"><div class="portfolio-item__inner"><div class="portfolio-item__front"><img src="{% static 'images/portfolio5.png' %}" alt="Work 5"></div><div class="portfolio-item__back"><h3>Британская Клетка</h3><p>Эталон качества и рисунка.</p></div></div></div>
+        <div class="portfolio-item"><div class="portfolio-item__inner"><div class="portfolio-item__front"><img src="{% static 'images/portfolio7.png' %}" alt="Work 6"></div><div class="portfolio-item__back"><h3>Контрастный Акцент</h3><p>Детали ручной работы.</p></div></div></div>
+        <div class="portfolio-item"><div class="portfolio-item__inner"><div class="portfolio-item__front"><img src="{% static 'images/portfolio8.png' %}" alt="Work 7"></div><div class="portfolio-item__back"><h3>Небесный Smart Casual</h3><p>Стиль вне формальностей.</p></div></div></div>
+        <div class="portfolio-item"><div class="portfolio-item__inner"><div class="portfolio-item__front"><img src="{% static 'images/portfolio9.png' %}" alt="Work 8"></div><div class="portfolio-item__back"><h3>Бархатный Синий</h3><p>Фактурный и глубокий цвет.</p></div></div></div>
+        <div class="portfolio-item"><div class="portfolio-item__inner"><div class="portfolio-item__front"><img src="{% static 'images/portfolio10.png' %}" alt="Work 9"></div><div class="portfolio-item__back"><h3>Летняя Элегантность</h3><p>Свежесть льна и шелка.</p></div></div></div>
+        <div class="portfolio-item"><div class="portfolio-item__inner"><div class="portfolio-item__front"><img src="{% static 'images/portfolio11.png' %}" alt="Work 10"></div><div class="portfolio-item__back"><h3>Кожаный Тренч</h3><p>Изысканность натуральной кожи.</p></div></div></div>
+        <div class="portfolio-item"><div class="portfolio-item__inner"><div class="portfolio-item__front"><img src="{% static 'images/portfolio12.png' %}" alt="Work 11"></div><div class="portfolio-item__back"><h3>Горчичный Оверкот</h3><p>Тепло и уверенный стиль.</p></div></div></div>
+        <div class="portfolio-item"><div class="portfolio-item__inner"><div class="portfolio-item__front"><img src="{% static 'images/portfolio13.png' %}" alt="Work 12"></div><div class="portfolio-item__back"><h3>Изумрудный Шарм</h3><p>Роскошь для особых моментов.</p></div></div></div>
+
+    </div>
+</section>
+
+<section class="portfolio-footer">
+    <div class="container" style="text-align: center; padding: 60px 0;">
+        <h2>Индивидуальный пошив — это искусство</h2>
+        <p>Каждая работа в этом потоке создана вручную по меркам наших клиентов.</p>
+        <a href="{% url 'contact' %}" class="button-main">Записаться на примерку</a>
+    </div>
+</section>
+{% endblock %}
